@@ -1,0 +1,23 @@
+@use 'mixins/text';
+@use "variables";
+@use "sass:color";
+$color: variables.$primary; 
+
+.card {
+    margin: 5px;
+    padding: 5px;
+}
+
+.card__btn {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    background: color.adjust($color, $lightness: 15%);
+    color: #8c4564;
+    @include text.small-cap;
+    
+    &:hover {
+        background: color.adjust($color, $lightness: 25%);
+    }
+}
+
